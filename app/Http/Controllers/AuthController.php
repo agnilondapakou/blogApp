@@ -38,7 +38,7 @@ class AuthController extends Controller
         if(!Auth::attempt($fields)) {
             return response([
                 'message' => 'Bad credentials'
-            ], 401);
+            ], 403);
         }
 
         return response([
