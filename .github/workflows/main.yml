@@ -15,3 +15,8 @@ jobs:
         run: |
           npm install
           npm run production
+      - name: Configure PHP 8.0
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: 8.0
+          extensions: mbstring, intl, pdo_mysql, zip, gd, exif, pcntl, bcmath, soap, curl, dom, fileinfo, json, xml, ctype, iconv, tokenizer, simplexml
