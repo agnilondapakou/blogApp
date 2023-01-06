@@ -20,6 +20,5 @@ jobs:
         with:
           php-version: 8.0
           extensions: mbstring, intl, pdo_mysql, zip, gd, exif, pcntl, bcmath, soap, curl, dom, fileinfo, json, xml, ctype, iconv, tokenizer, simplexml
-      - name: Install Composer dependencies
-        run: | 
-          composer install --no-dev --no-interaction --prefer-dist
+      - name: Create deployment artifact
+        run: tar -czf app.tar.gz --exclude=*.git --exclude=node_modules *
